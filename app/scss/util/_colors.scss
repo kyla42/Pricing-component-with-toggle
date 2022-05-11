@@ -1,0 +1,18 @@
+$VeryLightGrayishBlue: hsl(240, 78%, 98%);
+$LightGrayishBlue: hsl(234, 14%, 74%);
+$GrayishBlue: hsl(233, 13%, 49%);
+$DarkGrayishBlue: hsl(232, 13%, 33%);
+$GradientToBottom: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$GradientToRight: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+.c-lgray {
+    color: $LightGrayishBlue;
+}
+
+.c-gray {
+    color: $GrayishBlue;
+}
+
+.c-white {
+    color: $VeryLightGrayishBlue;
+}

@@ -1,0 +1,76 @@
+@use "colors" as *;
+
+$mainFont: 'Montserrat', sans-serif;
+
+$font_small: 1.5rem;
+$font_mid: 1.8rem;
+$font_lg: 3.2rem;
+$font_price: 6.9rem;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 1.5rem;
+    background-color: $VeryLightGrayishBlue;
+    z-index: -5;
+}
+
+a,
+a:hover {
+    width: 100%;
+    padding: 1.3rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.14rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all .2s ease;
+}
+
+h1 {
+    color: $GrayishBlue;
+    font-size: $font_lg;
+    padding-top: 7.1rem;
+}
+
+h2 {
+    color: $GrayishBlue;
+    font-size: $font_mid;
+    padding-bottom: 2.7rem;
+}
+
+p {
+    background-color: whitesmoke;
+}
+
+.fx {
+    display: flex;
+
+    &-col {
+        flex-direction: column;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-jcai-c {
+        justify-content: center;
+        align-items: center;
+    }
+}
