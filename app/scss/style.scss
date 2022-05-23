@@ -53,6 +53,7 @@ main {
             border-radius: 1.6rem;
             background: u.$GradientToBottom;
             outline: none;
+            -webkit-tap-highlight-color:rgba(0,0,0,0);
 
             &:hover {
                 opacity: 0.6;
