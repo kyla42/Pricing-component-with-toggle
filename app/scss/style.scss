@@ -7,6 +7,7 @@ main {
     background-image: url(../images/bg-top.svg);
     background-repeat: no-repeat;
     background-position: top right;
+    @extend %fx-ai-c;
 
     @include u.bp(sm) {
         background-position: top -5rem right -20rem;
@@ -41,8 +42,11 @@ main {
 }
 
 .title {
+    @extend %fxcol, %fx-ai-c;
+
     .toggle_area {
         padding: 4rem 0 6.4rem 0;
+        @extend %fx-ai-c;
 
         button {
             position: relative;
@@ -84,17 +88,17 @@ main {
     justify-content: center;
 
     @include u.bp(md) {
-        flex-direction: column;
-        align-items: center;
         margin: 0 auto;
-        row-gap: 3rem;
         padding-bottom: 7rem;
+        flex-direction: column;
+        align-items: center; 
+        row-gap: 3rem;
     }
 
     .box {
-        width: 35rem;
-        justify-content: flex-start;
+        width: 35rem;      
         box-shadow: 0 3rem 3rem 0 hsla(237, 63%, 64%, 0.1);
+        @extend %fxcol, %fx-jc-s, %fx-ai-c;
 
         @include u.bp(sm) {
             width: 33rem;
@@ -106,38 +110,43 @@ main {
             height: 7rem;
             color: u.$DarkGrayishBlue;
             font-size: u.$font_price;
-            transform: scaleY(1.04);
             letter-spacing: -0.05rem;
+            @extend %fx-jcai-c;
+            transform: scaleY(1.04);
 
-            span {
-                font-size: 3.8rem;
-                margin-right: 0.8rem;
-            }
-
-            &__mth {
+            %price-base {
                 position: absolute;
-                top: 0;
                 height: 100%;
+                @extend %fx-ai-c;
                 transition: all .3s ease;
+
+                span {
+                    font-size: 3.8rem;
+                    margin-right: 0.8rem;
+                }
 
                 &.active {
                     transform: translateY(-100%);
-                    opacity: 0;
                     transition: all .3s ease;
                 }
             }
 
-            &__ann {
-                position: absolute;
-                height: 100%;
-                bottom: -100%;
-                opacity: 0;
-                transition: all .3s ease;
+            &__mth {
+                @extend %price-base;
+                top: 0;
 
                 &.active {
-                    transform: translateY(-100%);
+                    opacity: 0;
+                }
+            }
+
+            &__ann {
+                @extend %price-base;
+                bottom: -100%;
+                opacity: 0;
+
+                &.active {
                     opacity: 1;
-                    transition: all .3s ease;
                 }
             }
         }
@@ -145,10 +154,12 @@ main {
         .details {
             width: 100%;
             padding: 3.3rem 0;
+            @extend %fxcol;
 
             .info {
                 height: 5.3rem;
                 border-top: 0.1rem solid hsla(234, 14%, 74%, 0.5);
+                @extend %fx-jcai-c;
 
                 &:last-child {
                     border-bottom: 0.1rem solid hsla(234, 14%, 74%, 0.5);
@@ -183,11 +194,14 @@ main {
             border: 0.1rem solid transparent;
             color: white;
             background: u.$GradientToRight;
+            @extend %fx-jc-c;
+            transition: all .3s ease-in-out;
 
             &:hover {
                 border: 0.1rem solid hsl(237, 63%, 64%);
                 color: hsl(237, 63%, 64%);
                 background: white;
+                transition: all .3s ease-in-out;
             }
         }
     }
@@ -203,11 +217,14 @@ main {
             border: 0.1rem solid transparent;
             color: hsl(237, 63%, 64%);
             background-color: white;
+            @extend %fx-jc-c;
+            transition: all .3s ease-in-out;
 
             &:hover {
                 border: 0.1rem solid white;
                 color: white;
                 background-color: transparent;
+                transition: all .3s ease-in-out;
             }
         }
     }

@@ -55,23 +55,34 @@ p {
     background-color: whitesmoke;
 }
 
-.fx {
+// flex
+%fx {
     display: flex;
 
-    &-col {
-        flex-direction: column;
-    }
-
     &-jc-c {
+        display: flex;
         justify-content: center;
     }
 
+    &-jc-s {
+        display: flex;
+        justify-content: start;
+    }
+
     &-ai-c {
+        display: flex;
         align-items: center;
     }
 
     &-jcai-c {
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 }
+
+%fxcol {
+    display: flex;
+    flex-direction: column;
+}
+
